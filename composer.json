@@ -1,0 +1,62 @@
+{
+  "name": "sagartimilsina/nepal-payment-sdk",
+  "description": "Unified eSewa (v2/ePay) and Khalti payment gateway SDK for PHP and Laravel.",
+  "type": "library",
+  "license": "MIT",
+  "keywords": [
+    "laravel",
+    "esewa",
+    "khalti",
+    "nepal payment",
+    "payment gateway",
+    "epay"
+  ],
+  "authors": [
+    {
+      "name": "Sagar Timilsina",
+      "email": "timilsinasagar04@gmail.com",
+      "homepage": "https://github.com/timilsinasagar"
+    }
+  ],
+  "require": {
+    "php": "^8.2",
+    "ext-curl": "*",
+    "ext-json": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.0 || ^11.0 || ^12.0",
+    "orchestra/testbench": "^8.0 || ^9.0 || ^10.0",
+    "laravel/pint": "^1.13",
+    "illuminate/support": "^10.0 || ^11.0 || ^12.0 || ^13.0"
+  },
+  "suggest": {
+    "illuminate/support": "Required only if you want Laravel auto-discovery, the facade, and the bundled demo routes."
+  },
+  "autoload": {
+    "psr-4": {
+      "Sagartimilsina\\NepalPayment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Sagartimilsina\\NepalPayment\\Tests\\": "tests/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Sagartimilsina\\NepalPayment\\NepalPaymentServiceProvider"
+      ],
+      "aliases": {
+        "NepalPayment": "Sagartimilsina\\NepalPayment\\Facades\\NepalPayment"
+      }
+    }
+  },
+  "scripts": {
+    "test": "phpunit",
+    "lint": "pint --test",
+    "format": "pint"
+  },
+  "minimum-stability": "stable",
+  "prefer-stable": true
+}
